@@ -33,6 +33,8 @@ I found the image zip in `/tmp/PackageOperation02/` with the name `x86-26_r07.zi
 emulator -list-avds
 ```
 
+### Emulator Turn On
+
 ```bash
 emulator -netdelay none -netspeed full -avd <avd_name>
 ```
@@ -49,7 +51,7 @@ optirun emulator -avd Nexus_S_API_26
 ```
 ~/Android/Sdk/tools/bin/sdkmanager
 ```
-
+### Image Install
 
 ```bash
 sdkmanager "system-images;android-26;google_apis_playstore;x86"
