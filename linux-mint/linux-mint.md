@@ -40,3 +40,18 @@ sduo apt-get update
 sudo apt-get install telegram
 ```
 
+## DBeaver
+
+```bash
+sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+sudo apt-get update
+sudo apt-get install dbeaver-ce
+```
+
+## Node.js v12
+
+```bash
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
