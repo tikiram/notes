@@ -13,6 +13,22 @@ cd /opt/ideaIU/bin
 ./ idea.sh
 ```
 
+
+
+#  Rider + .Net
+
+```bash
+sudo apt install mono-complete
+```
+
+```bash
+sudo tar -xzf JetbrainsRider.tar.gz -C /opt
+cd /opt/JetbrainsRider/bin
+./ rider.sh
+```
+
+
+
 # Hypervisor AVD
 
 ```
