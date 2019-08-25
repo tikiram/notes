@@ -32,3 +32,31 @@ GET `http://localhost:8080/user/1`
 
 > https://spring.io/guides/tutorials/rest/
 
+
+
+## REST Service
+
+> https://spring.io/guides/gs/rest-service/#scratch
+
+## Transaction
+
+> https://www.baeldung.com/the-persistence-layer-with-spring-and-jpa
+
+"However, if we’re using a Spring Boot project, and have a spring-data-* or spring-tx dependencies on the classpath, then transaction management will be enabled by default."
+
+
+
+> https://stackoverflow.com/questions/2396493/what-is-a-classpath-and-how-do-i-set-it
+
+**@Transactional**
+
+he annotation supports **further configuration** as well:
+
+- the *Propagation Type* of the transaction
+- the *Isolation Level* of the transaction
+- a *Timeout* for the operation wrapped by the transaction
+- a *readOnly flag* – a hint for the persistence provider that the transaction should be read only
+- the *Rollback* rules for the transaction
+
+Note that – by default, rollback happens for runtime, unchecked exceptions only. **The checked exception does not trigger a rollback** of the transaction. We can, of course, configure this behavior with the *rollbackFor* and *noRollbackFor* annotation parameters.
+
