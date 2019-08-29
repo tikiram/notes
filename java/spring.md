@@ -60,3 +60,27 @@ he annotation supports **further configuration** as well:
 
 Note that – by default, rollback happens for runtime, unchecked exceptions only. **The checked exception does not trigger a rollback** of the transaction. We can, of course, configure this behavior with the *rollbackFor* and *noRollbackFor* annotation parameters.
 
+
+
+---
+
+## Database
+
+```groovy
+implementation 'org.mariadb.jdbc:mariadb-java-client:2.4.2'
+```
+
+```
+spring.datasource.url=jdbc:mariadb://drunkserver.tk:3306/spring
+spring.datasource.username=tikiram2
+spring.datasource.password=YYP!la0g0&#R
+spring.datasource.driverClassName=org.mariadb.jdbc.Driver
+
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MariaDB10Dialect
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql = true
+
+spring.datasource.testWhileIdle = true
+spring.datasource.validationQuery = SELECT 1
+```
+
