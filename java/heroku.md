@@ -1,4 +1,93 @@
 # Heroku + Java
+## Fast Start
+
+### Others
+
+```bash
+heroku ps:scale web=1
+```
+
+### Install
+
+```bash
+sudo apt update
+sudo apt install snapd
+sudo snap install heroku --classic
+heroku login
+```
+
+### Deploy
+
+File:  `src/main/resources/application.properties`
+
+```
+server.port=${PORT:80}
+```
+
+File: `Procfile`
+
+```
+web: java -jar build/libs/gradle-getting-started-1.0.jar
+```
+
+In project root directory:
+
+```bash
+heroku create
+git push heroku master
+heroku logs --tail
+```
+
+### Add Postgresql
+
+```bash
+heroku addons:create heroku-postgresql
+heroku config
+heroku pg
+```
+
+File: `src/main/resources/application.properties`
+
+```
+spring.datasource.url= ${DATABASE_URL:}
+
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.maxActive=10
+spring.datasource.maxIdle=5
+spring.datasource.minIdle=2
+spring.datasource.initialSize=5
+spring.datasource.removeAbandoned=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+server.port=${PORT:80}
+```
+
+File: `build.gradle`
+
+```groovy
+runtimeOnly 'org.postgresql:postgresql'
+implementation 'org.hibernate:hibernate-core:5.4.2.Final' // only if bug ocurrs
+```
+
+Install local Postgresql.
+
+Add run argument
+
+```
+-DDATABASE_URL="jdbc:postgresql://localhost/myDb?user=bob&password=pw"
+```
+
+File: `~/bashrc`
+
+```
+export DATABASE_URL="jdbc:postgresql://localhost/mydb?user=bob&password=pw"
+```
+
+
+
+---
+---
+# Heroku
 
 All Heroku applications run in a collection of lightweight Linux containers called **dynos**. This article describes dyno conventions on the Heroku platform.
 
@@ -8,6 +97,14 @@ All Heroku applications run in a collection of lightweight Linux containers call
 
 > Heroku + Java + Gradle
 > https://devcenter.heroku.com/articles/getting-started-with-gradle-on-heroku
+
+Set a explicit port
+
+`application.properties`
+
+```
+server.port=${PORT:80}
+```
 
 Heroku cli = Heroku toolbet
 
@@ -128,6 +225,103 @@ heroku config
 heroku pg
 ```
 
+Heroku sets a system property `DATABASE_URL` with a JDBC url formated value
+
+`application.properies`
+
+```
+spring.datasource.url= ${DATABASE_URL:}
+
+spring.datasource.driverClassName=org.postgresql.Driver
+spring.datasource.maxActive=10
+spring.datasource.maxIdle=5
+spring.datasource.minIdle=2
+spring.datasource.initialSize=5
+spring.datasource.removeAbandoned=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+server.port=${PORT:80}
+```
+
+```groovy
+runtimeOnly 'org.postgresql:postgresql'
+```
 
 
 
+This is enough for app to connect.
+
+JDBC Format
+
+```
+jdbc:postgresql://<host>:<port>/<dbname>?sslmode=require&user=<username>&password=<password>
+```
+
+**Issue: clob-is-not-yet-implemented**
+
+https://stackoverflow.com/questions/49110818/method-org-postgresql-jdbc-pgconnection-createclob-is-not-yet-implemented
+
+```groovy
+implementation 'org.hibernate:hibernate-core:5.4.2.Final'
+```
+
+
+
+**Localhost (running project with java command)**
+
+Set a system property using `-D` argument with the JDBC URL value.
+
+```
+java -DDATABASE_URL="jdbc:postgresql://localhost/myDb?user=bob&password=pw" <more commands>
+```
+
+**Localhost (running project with `heroku local web`)**
+
+Set a system property with Linux's `export` command then run the project.
+
+```
+export DATABASE_URL="jdbc:postgresql://localhost/mydb?user=bob&password=pw"
+
+heroku local web
+```
+
+You can put the whole `export` command at the end of the `~/.bashrc` file.
+
+**Custom Format**
+
+If the system property has a custom format you can always use a bean to handle the data source.
+
+```java
+@Configuration
+public class MainConfiguration {
+    
+    // Value from the `application.properties` file
+    @Value("${spring.datasource.url}")
+    private String value;
+
+    @Bean
+    public HikariDataSource dataSource() throws URISyntaxException {
+
+//        // JDBC URL generation
+//
+//        URI dbUri = new URI(value);
+//        String username = dbUri.getUserInfo().split(":")[0];
+//        String password = dbUri.getUserInfo().split(":")[1];
+//        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + dbUri.getPath() + "?user=" + username + "&password=" + password;
+
+        HikariConfig config = new HikariConfig();
+        config.setJdbcUrl(dbUrl);
+        return new HikariDataSource(config);
+    }
+}
+```
+
+**Spring Cloud Connector**
+
+If you do not want to specify the `spring.datasource.url` property you can use the Heroku Cloud Connector, its scans the system properties and configures some services.
+
+```groovy
+implementation 'org.springframework.boot:spring-boot-starter-cloud-connectors'
+```
+
+I have no idea how to configure the Local Cloud Connector for the local environment.

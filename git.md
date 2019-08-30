@@ -1,6 +1,25 @@
 
 # Git
 
+```bash
+git pull --no-edit
+```
+
+
+
+```
+git reset --hard HEAD
+```
+
+
+
+```bash
+git fetch origin
+git reset --hard origin/master
+```
+
+
+
 ## Adding remote origin
 
 ```bash

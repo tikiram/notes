@@ -1,6 +1,21 @@
 # Spring
 
+## Fast Start
 
++ Rest Repositories  ---> includes web_starter
++ Spring Data JPA    ---> includes JDBC starter
++ `database` driver
+
+Add JPA Facet (Optional). Add JPA Facet to main
+
+Shorcut:  `Ctrl` + `Shift` + `Alt` + `S`
+
+---
+---
+
+### Must Read
+
++ https://www.endoflineblog.com/spring-best-practices
 
 ## Starters
 
@@ -66,6 +81,8 @@ Note that – by default, rollback happens for runtime, unchecked exceptions onl
 
 ## Database
 
+### MariaDB
+
 ```groovy
 implementation 'org.mariadb.jdbc:mariadb-java-client:2.4.2'
 ```
@@ -82,5 +99,31 @@ spring.jpa.show-sql = true
 
 spring.datasource.testWhileIdle = true
 spring.datasource.validationQuery = SELECT 1
+```
+
+### Postgresql
+
+```groovy
+runtimeOnly 'org.postgresql:postgresql'
+```
+
+```
+spring.datasource.url= jdbc:postgresql://localhost/db?user=bob&password=mypass
+spring.datasource.driverClassName=org.postgresql.Driver
+
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=create
+
+spring.datasource.maxActive=10
+spring.datasource.maxIdle=5
+spring.datasource.minIdle=2
+spring.datasource.initialSize=5
+spring.datasource.removeAbandoned=true
+```
+
+JDBC Postgresql Format
+
+```
+jdbc:postgresql://<host>:<port>/<dbname>?sslmode=require&user=<username>&password=<password>
 ```
 
