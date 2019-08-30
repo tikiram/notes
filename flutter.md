@@ -3,7 +3,8 @@
 
 ## Flutter pub
 
-### Cache
+**Cache**
+
 ```
 /opt/flutter/.pub-cache/hosted/pub.dartlang.org/<package>
 ```
@@ -14,13 +15,14 @@
 /opt/flutter/bin/cache/dart-sdk/bin/pub
 ```
 
-### Adding to cache
+**Adding to cache**
 
 ```bash
 pub cache add <package> --version "0.1.23"
 ```
 
-### Cache
+**Cache**
+
 ```
 ~/.pub-cache/hosted/pub.dartlang.org/<package>
 ```

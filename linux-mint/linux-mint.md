@@ -2,7 +2,7 @@
 
 ```
 sudo apt install git
-sudo apt install xcip
+sudo apt install xcip # clipboard
 ```
 
 # Intellij
