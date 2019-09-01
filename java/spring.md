@@ -16,6 +16,8 @@ Shorcut:  `Ctrl` + `Shift` + `Alt` + `S`
 ### Must Read
 
 + https://www.endoflineblog.com/spring-best-practices
++ **Spring + Kotlin**
+  https://kotlinlang.org/docs/reference/compiler-plugins.html
 
 ## Starters
 

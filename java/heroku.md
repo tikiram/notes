@@ -30,6 +30,16 @@ File: `Procfile`
 web: java -jar build/libs/gradle-getting-started-1.0.jar
 ```
 
+```
+echo "web: java -jar build/libs/<name.jar>" > Procfile
+```
+
+Check project is in a git repository
+
+```bash
+git status
+```
+
 In project root directory:
 
 ```bash

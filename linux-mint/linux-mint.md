@@ -11,6 +11,7 @@ sudo apt install xcip # clipboard
 sudo tar -xzf ideaIU.tar.gz -C /opt
 cd /opt/ideaIU/bin
 ./ idea.sh
+sudo chown -R $USER /opt/idea
 ```
 
 
@@ -32,6 +33,8 @@ sudo apt install mono-complete
 sudo tar -xzf JetbrainsRider.tar.gz -C /opt
 cd /opt/JetbrainsRider/bin
 ./ rider.sh
+
+sudo chown -R $USER /opt/rider
 ```
 
 

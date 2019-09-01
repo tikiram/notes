@@ -5,18 +5,26 @@
 git pull --no-edit
 ```
 
-
-
 ```
 git reset --hard HEAD
 ```
-
-
 
 ```bash
 git fetch origin
 git reset --hard origin/master
 ```
+
+
+
+Reapply .gitignore
+
+```bash
+git rm -r --cached
+git add .
+git commit -m ".gitignore is now working"
+```
+
+
 
 
 
