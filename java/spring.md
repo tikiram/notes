@@ -79,6 +79,25 @@ Note that – by default, rollback happens for runtime, unchecked exceptions onl
 
 
 
+### Projections
+
+https://www.baeldung.com/spring-data-jpa-projections
+
+```kotlin
+
+
+@Repository interface PersonRepo : JpaRepository<PersonEntity, Long> {
+
+  @Query("FROM PersonEntity WHERE first_name = :firstName")
+  fun findAllByFirstName(@Param("firstName") firstName: String):
+    List<PersonEntity>
+}
+```
+
+
+
+
+
 ---
 
 ## Database

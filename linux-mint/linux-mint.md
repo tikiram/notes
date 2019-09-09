@@ -74,10 +74,41 @@ sudo apt-get update
 sudo apt-get install dbeaver-ce
 ```
 
-## Node.js v12
+## Node.js
+
+>https://github.com/nvm-sh/nvm
+
+```
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+
+# this modifies ~/.bashrc
+# close and reopen terminal
+
+nvm ls-remote
+
+# install latest LTS
+nvm install 10.16.3
+
+nvm current
+```
+
+Through `apt` (not recommended due to `sudo` issues with `npm -g install`).
 
 ```bash
+# Select version repository
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
+# install
 sudo apt-get install -y nodejs
 ```
 
+## desktop recorder
+```bash
+sudo apt install kazam
+```
+
+## video editor
+```bash
+sudo apt install openshot-qt
+```
