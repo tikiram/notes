@@ -50,6 +50,36 @@ sudo adduser $USER kvm
 
 > https://stackoverflow.com/questions/37300811/android-studio-dev-kvm-device-permission-denied
 
+
+
+### KVM
+
+```bash
+sudo apt install qemu qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils virt-manager ebtables dnsmasq gir1.2-spice-client-gtk-3.0
+```
+
+- **libvirt-bin**: Administrador de instancias kvm y instancias qemu.
+- **qemu & qemu-kvm**: El backend (los servicios de virtualizacion)
+- **ubuntu-vm-builder**: Linea de comandos para la construccion de maquinas virtuales.
+- **bridge-utils**: Provee un puente de la red del host a la maquina virtual.
+- **virt-manager**: Interfaz visual para la creación de maquinas virtuales.
+- **ebtables dnsmasq gir1.2-spice-client-gtk-3.0:** Dependencias para interfaz NAT y virt-manager
+
+```bash
+sudo addgruop libvirtd
+sudo adduser `id -un` libvirtd # Relogin after this
+sudo virsh list --all # check 
+```
+
+```bash
+# the service
+sudo service libvirtd start
+sudo service libvirtd restart
+sudo update-rc.d libvirtd enable
+```
+
+
+
 # QBitTorrent
 
 ```bash
