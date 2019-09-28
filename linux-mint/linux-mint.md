@@ -14,7 +14,22 @@ cd /opt/ideaIU/bin
 sudo chown -R $USER /opt/idea
 ```
 
+### Flutter
 
+Install flutter from Intellij
+
+File: `.bashrc`, append to the end
+
+```
+export PATH="$PATH:$HOME/flutter/bin"
+export PATH="$PATH:$HOME/Android/Sdk/tools/bin"
+
+```
+
+```bash
+flutter upgrade
+flutter doctor --android-licenses
+```
 
 #  Rider + .Net
 
