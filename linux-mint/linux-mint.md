@@ -5,6 +5,16 @@ sudo apt install git
 sudo apt install xcip # clipboard
 ```
 
+
+Take a screenshot				Print
+Take a screenshot of a window	Alt + Print
+Take a screenshot of an area	Shift + Print
+Copy area to clipboard			Shift + Control + Print
+Copy screen to clipboard	Control + Print
+Copy window to clipboard	Control + Alt + Print
+Toggle recording desktop	Shift + Control + Alt + R
+
+
 # Intellij
 
 ```
@@ -93,9 +103,17 @@ sudo service libvirtd restart
 sudo update-rc.d libvirtd enable
 ```
 
+## Sublime Text
 
+```bash
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-tex
+```
 
-# QBitTorrent
+## QBitTorrent
 
 ```bash
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
@@ -103,7 +121,7 @@ sudo apt-get update
 sudo apt-get install -y qbittorrent
 ```
 
-# Telegram
+## Telegram
 
 ```bash
 sudo add-apt-repository ppa:atareao/telegram
@@ -156,4 +174,15 @@ sudo apt install kazam
 ## video editor
 ```bash
 sudo apt install openshot-qt
+```
+
+
+
+---
+## Services
+```bash
+sudo /etc/init.d/odoo status
+sudo /etc/init.d/odoo stop
+sudo /etc/init.d/postgresql status 
+sudo /etc/init.d/postgresql stop
 ```

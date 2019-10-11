@@ -1,5 +1,12 @@
 # Gradle
 
+You can simply add `org.gradle.daemon=false` to a `gradle.properties` file in the project root folder.
+
+https://medium.com/@wasyl/make-your-gradle-builds-fast-again-ea323ce6a435
+
+https://orhun.nl/blog/Enable-IntelliJ-to-build-automatically-when-running/
+
+
 ## Application Plugin
 
 ```groovy

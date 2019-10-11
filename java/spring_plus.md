@@ -4,6 +4,16 @@ spring.data.rest.base-path=/api
 
 @Controller marks this class as a Spring MVC controller.
 
+
+```
+http
+  .httpBasic().and()
+  .authorizeRequests()
+    .antMatchers(HttpMethod.POST, "/employees").hasRole("ADMIN")
+    .antMatchers(HttpMethod.PUT, "/employees/**").hasRole("ADMIN")
+    .antMatchers(HttpMethod.PATCH, "/employees/**").hasRole("ADMIN");
+```
+
 # Buscador
 
 https://stackoverflow.com/questions/47372429/how-to-search-by-an-object-in-springboot

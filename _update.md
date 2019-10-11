@@ -1,4 +1,11 @@
 
+```
+sudo wondershaper enp4s0 2400 2400
+sudo wondershaper wlp5s0 2400 2400
+sudo nethogs wlp5s0
+sudo nethogs enp4s0
+```
+
 
 flutter doctor
 flutter upgrade

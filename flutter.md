@@ -1,9 +1,12 @@
 # Flutter
 
-
+flutter doctor
 flutter upgrade
 flutter doctor --android-licenses
 >https://github.com/flutter/flutter/issues/16025
+
+flutter pub run build_runner build
+
 
 Dart SDK:
 ```
