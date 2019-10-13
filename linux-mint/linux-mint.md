@@ -137,6 +137,12 @@ sudo apt-get update
 sudo apt-get install dbeaver-ce
 ```
 
+## Guake
+```bash
+sudo apt install libutempter0
+sudo apt install guake
+```
+
 ## Node.js
 
 >https://github.com/nvm-sh/nvm
