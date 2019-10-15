@@ -103,7 +103,7 @@ sudo service libvirtd restart
 sudo update-rc.d libvirtd enable
 ```
 
-## Sublime Text
+### Sublime Text
 
 ```bash
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
@@ -113,7 +113,7 @@ sudo apt-get update
 sudo apt-get install sublime-tex
 ```
 
-## QBitTorrent
+### QBitTorrent
 
 ```bash
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable
@@ -121,7 +121,7 @@ sudo apt-get update
 sudo apt-get install -y qbittorrent
 ```
 
-## Telegram
+### Telegram
 
 ```bash
 sudo add-apt-repository ppa:atareao/telegram
@@ -129,7 +129,7 @@ sduo apt-get update
 sudo apt-get install telegram
 ```
 
-## DBeaver
+### DBeaver
 
 ```bash
 sudo add-apt-repository ppa:serge-rider/dbeaver-ce
@@ -137,13 +137,13 @@ sudo apt-get update
 sudo apt-get install dbeaver-ce
 ```
 
-## Guake
+### Guake
 ```bash
 sudo apt install libutempter0
 sudo apt install guake
 ```
 
-## Node.js
+### Node.js
 
 >https://github.com/nvm-sh/nvm
 
