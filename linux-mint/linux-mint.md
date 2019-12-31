@@ -2,7 +2,7 @@
 
 ```
 sudo apt install git
-sudo apt install xcip # clipboard
+sudo apt install xclip # clipboard
 ```
 
 
@@ -40,6 +40,9 @@ export PATH="$PATH:$HOME/Android/Sdk/tools/bin"
 flutter upgrade
 flutter doctor --android-licenses
 ```
+
+If the previous command doesn't work please refer to /notes/android.md to find a fix.
+
 
 #  Rider + .Net
 
