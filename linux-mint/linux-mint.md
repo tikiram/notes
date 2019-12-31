@@ -28,6 +28,8 @@ sudo chown -R $USER /opt/idea
 
 Install flutter from Intellij
 
+(for some odd reason, the install sdk is not available until flutter is manually installed)
+
 File: `.bashrc`, append to the end
 
 ```
@@ -37,6 +39,7 @@ export PATH="$PATH:$HOME/Android/Sdk/tools/bin"
 ```
 
 ```bash
+flutter doctor
 flutter upgrade
 flutter doctor --android-licenses
 ```
