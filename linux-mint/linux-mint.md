@@ -14,6 +14,21 @@ Copy screen to clipboard	Control + Print
 Copy window to clipboard	Control + Alt + Print
 Toggle recording desktop	Shift + Control + Alt + R
 
+# Installation
+
+## From windows
+
++ Download Rufus (create a live USB)
++ If you install in a secondary Drive
+	+ Create a EFI partition (200 mb) if is not exists
+	+ Set the bootloader in the secondary drive
++ After installation add the entry to the boot list in the bios
+	+ Add Path
+	+ select the secondary drive
+	+ select the efi partition (?)
+	+ select `boot`
+	+ select `efi64` (i don't remeber exactly)
+
 
 # Intellij
 
@@ -40,6 +55,7 @@ export PATH="$PATH:$HOME/Android/Sdk/tools/bin"
 
 ```bash
 flutter doctor
+flutter config --no-analytics
 flutter upgrade
 flutter doctor --android-licenses
 ```
