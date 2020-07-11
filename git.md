@@ -1,9 +1,25 @@
+---
+title: git
+created: '2020-07-02T04:14:03.950Z'
+modified: '2020-07-02T04:22:25.502Z'
+---
 
 # Git
 
 ```bash
 git pull --no-edit
 ```
+
+```bash
+git checkout master
+git merge --squash --no-edit some-feature
+```
+
+```bash
+git checkout master
+git pull origin feature --no-edit
+```
+
 
 ```
 git reset --hard HEAD
