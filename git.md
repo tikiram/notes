@@ -1,10 +1,40 @@
 ---
 title: git
 created: '2020-07-02T04:14:03.950Z'
-modified: '2020-07-02T04:22:25.502Z'
+modified: '2020-07-20T21:24:29.418Z'
 ---
 
 # Git
+
+## SSH
+
+This creates a new ssh key, using the provided email as a label.
+
+```bash
+$ ssh-keygen -t rsa -b 4096 -C "tikiram.samaneb@gmail.com"
+```
+
+```bash
+# linux
+xclip -sel clip < ~/.ssh/id_rsa.pub
+
+# windows
+clip < .ssh/id_rsa.pub
+```
+
+```bash
+ssh -T git@github.com
+ssh -T git@gitlab.com
+```
+
+## Init
+
+```bash
+git config --global user.name "Tikiram Samaneb"
+git config --global user.email "tikiram.samaneb@gmail.com"
+```
+
+## Commands
 
 ```bash
 git pull --no-edit
