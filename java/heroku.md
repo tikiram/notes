@@ -1,4 +1,5 @@
 # Heroku + Java
+
 ## Fast Start
 
 ### Others
@@ -93,10 +94,10 @@ File: `~/bashrc`
 export DATABASE_URL="jdbc:postgresql://localhost/mydb?user=bob&password=pw"
 ```
 
-
+---
 
 ---
----
+
 # Heroku
 
 All Heroku applications run in a collection of lightweight Linux containers called **dynos**. This article describes dyno conventions on the Heroku platform.
@@ -195,8 +196,6 @@ heroku ps
 
 By default, your app is deployed on a free dyno. Free dynos will sleep after a half hour of inactivity (if they don’t receive any traffic). This causes a delay of a few seconds for the first request upon waking. Subsequent requests will perform normally. Free dynos also consume from a monthly, account-level quota of [free dyno hours](https://devcenter.heroku.com/articles/free-dyno-hours) - as long as the quota is not exhausted, all free apps can continue to run.
 
-
-
 ## Run locally
 
 ```bash
@@ -214,8 +213,6 @@ heroku local web
 Just like Heroku, `heroku local` examines the `Procfile` to determine what to run. It also defines the port your app will bind to by setting the `PORT` environment variable, which is configured as `server.port` in the file `src/main/resources/application.properties`.
 
 `heroku local` doesn’t just run your app - it also sets “config vars”, something you’ll encounter in a later tutorial.
-
-
 
 https://stackoverflow.com/questions/39838330/heroku-local-web-debug-with-intellij-idea
 
@@ -257,8 +254,6 @@ server.port=${PORT:80}
 runtimeOnly 'org.postgresql:postgresql'
 ```
 
-
-
 This is enough for app to connect.
 
 JDBC Format
@@ -274,8 +269,6 @@ https://stackoverflow.com/questions/49110818/method-org-postgresql-jdbc-pgconnec
 ```groovy
 implementation 'org.hibernate:hibernate-core:5.4.2.Final'
 ```
-
-
 
 **Localhost (running project with java command)**
 
@@ -304,7 +297,7 @@ If the system property has a custom format you can always use a bean to handle t
 ```java
 @Configuration
 public class MainConfiguration {
-    
+
     // Value from the `application.properties` file
     @Value("${spring.datasource.url}")
     private String value;

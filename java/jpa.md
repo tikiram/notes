@@ -1,4 +1,3 @@
-
 # History
 
 ## JDBC
@@ -24,8 +23,6 @@ Al tener productos satisfactorios como toplink o hibernate, se crea un estandar,
 + Transactionality:
 + Granularity
 
-
-
 ## Anotations
 
 ```
@@ -34,8 +31,6 @@ Al tener productos satisfactorios como toplink o hibernate, se crea un estandar,
 private Integer employeeId;
 ```
 
-
-
 ### GeneratedValue: Strategy
 
 + AUTO
@@ -43,33 +38,29 @@ private Integer employeeId;
 + SEQUENCE: Uses @SequenceGenerator
 + TABLE: Separate table with primary key, uses @TableGenerator
 
-
-
 ```
 @Table(
-	name = "asdf",
-	uniqueContrains = {@UniqueConstraint(columnNames="columnA")}
+    name = "asdf",
+    uniqueContrains = {@UniqueConstraint(columnNames="columnA")}
 )
 public class Employee {
 
 
-	@Basic(optinal = false) // optinal tambien esta en Column
-	private int age;
-	
-	@Column(name="FNAME",length=100,nullable=false)
-	private String  firstName;
+    @Basic(optinal = false) // optinal tambien esta en Column
+    private int age;
+
+    @Column(name="FNAME",length=100,nullable=false)
+    private String  firstName;
 
 }
 ```
-
-
 
 ### Many to One
 
 `owner`
 
 ```java
-	@OneToMany(cascade=CascadeType.ALL)
+    @OneToMany(cascade=CascadeType.ALL)
     @JoinColumn(name="EMPLOYEE_ID")
     private Set<AccountEntity> accounts;
 ```
@@ -77,27 +68,22 @@ public class Employee {
 child
 
 ```java
-	@ManyToOne
+    @ManyToOne
     private EmployeeEntity employee;
 ```
 
-
-
 >  https://www.baeldung.com/hibernate-one-to-many
 
-
-
 ```java
-
 @Entity
 @Table(name="CART")
 public class Cart {
- 
+
     //...
- 
+
     @OneToMany(mappedBy="cart")
     private Set<Items> items;
-     
+
     // getters and setters
 }
 ```
@@ -106,19 +92,17 @@ public class Cart {
 @Entity
 @Table(name="ITEMS")
 public class Items {
-     
+
     //...
     @ManyToOne
     @JoinColumn(name="cart_id", nullable=false)
     private Cart cart;
- 
+
     public Items() {}
-     
+
     // getters and setters
 }
 ```
-
-
 
 ## Many to Many
 
