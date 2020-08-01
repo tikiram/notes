@@ -2,7 +2,7 @@
 pinned: true
 title: api-design
 created: '2020-07-04T04:34:00.466Z'
-modified: '2020-07-12T23:25:40.870Z'
+modified: '2020-07-19T00:09:38.262Z'
 ---
 
 # api-design
@@ -649,4 +649,84 @@ Note that any communication between consumer and provider takes place over a sec
 
 ## Chapter 9
 
-224
+Booleans are not extensible
+
+```
+"executed": true
+```
+
+is better to use an self descriptive object
+```
+"status":  {
+  "code" : "POSTPONED",
+  "label" : "postponed",
+}
+```
+
+Group similar data
+
+```
+creationDate: 1234,
+executionDate: 1234234
+```
+
+```
+events: [
+  { date: 1234, status; "CREATION" },
+  { date: 1234, status; "EXECUTION" }
+  { date: 1234, status; "DELETED" }
+]
+```
+
+
+### Summary
+
+Each API evolution must be carefully designed in order to avoid breaking
+¡
+¡
+¡
+¡
+changes, which can cause problems not only on the consumer’s but also the pro-
+vider’s side.
+API designers might have to live with previous poor design choices in order to
+avoid introducing benevolent but breaking changes.
+Depending on the context, breaking changes might be acceptable (for example,
+private APIs with consumers under the organization’s control).
+API versioning is a design + implementation + product management matter.
+Designing APIs with extensibility in mind eases the design of evolutions, lessens
+the risk of breaking changes, and favors API reusability.
+
+
+## Chapter 10
+
++ caching
+  - `Cache-Control: max-age=300` seconds
+  - `ETag: "1234"` identifies the instance of the resource, could be the hash/date/version of the data 
++ conditional requests
+
++ activate compression
++ persistent connections: HTTP/2
+
+### Design
+
++ cursor-based pagination
++ choose when to return all the details of and object in a list
+
+
+### Representations
+
+```
+Accept: application/vnd.bankapi.extended+json
+```
+
++ API designers have a role to play in network communication effciency.
++ The very frst step of network optimization is at the protocol level, not the design level.
++ API granularity and adaptability have impacts on network effciency.
++ Network effciency problems can be a sign of missing or inadequate goals in the API.
++ API design optimizations must not be done at the expense of usability and reusability; providing different API layers can help to avoid such booby traps.
+
+
+## Chapter 10
+
++ webhook
+
