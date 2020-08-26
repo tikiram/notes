@@ -1,5 +1,28 @@
 
 
+## Example
+
+```bash
+sudo docker build -t tikiram/products-api .
+```
+
+```bash
+sudo docker run --name products-api-container -p 3001:3000 -d tikiram/products-api
+```
+
+```bash
+sudo docker ps
+```
+
+```bash
+docker logs products-api-container
+```
+
+```bash
+sudo docker stop products-api-container
+```
+
+## Commands
 
 Run command will create the container using the image we specified
 
@@ -40,25 +63,25 @@ sudo docker run -d busybox:1.24 sleep 1000
 sudo docker ps
 ```
 
-```
+```bash
 sudo docker ps -a
 ```
 
 `--rm` removes container when done
 
-```
+```bash
 sudo docker run --rm busybox:1.24 sleep 1
 ```
 
 `--name` specifies the container's name
 
-```
+```bash
 sudo docker run --name something busybox:1.24
 ```
 
 Inspect shows information such as ip
 
-```
+```bash
 sudo docker inspect <container_id>
 ```
 
