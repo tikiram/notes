@@ -22,6 +22,13 @@ docker logs products-api-container
 sudo docker stop products-api-container
 ```
 
+## Stop and Remove all containers
+
+```bash
+docker stop $(docker ps -a -q)
+docker rm $(docker ps -a -q)
+```
+
 ## Commands
 
 Run command will create the container using the image we specified
