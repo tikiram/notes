@@ -12,11 +12,13 @@ This creates a new ssh key, using the provided email as a label.
 
 ```bash
 $ ssh-keygen -t rsa -b 4096 -C "tikiram.samaneb@gmail.com"
+$ ssh-keygen -t rsa -b 4096 -C "tikiram@icloud.com"
 ```
 
 ```bash
 # linux
 xclip -sel clip < ~/.ssh/id_rsa.pub
+xclip -sel clip < ~/.ssh/id_rsa_2.pub
 
 # windows
 clip < .ssh/id_rsa.pub
@@ -27,11 +29,23 @@ ssh -T git@github.com
 ssh -T git@gitlab.com
 ```
 
-## Init
+## SSH per repository
+
+```bash
+git config core.sshCommand "ssh -i ~/.ssh/id_rsa_2"
+```
+
+## Config
 
 ```bash
 git config --global user.name "Tikiram Samaneb"
 git config --global user.email "tikiram.samaneb@gmail.com"
+```
+
+## Current Config
+
+```bash
+git config --list --show-origin
 ```
 
 ## Commands
