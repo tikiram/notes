@@ -6,6 +6,16 @@ kitematic - gui docker client
 
 # docker
 
+
+## Troubleshot
+
+
+```bash
+sudo chmod 666 /var/run/docker.sock
+```
+
+## Install
+
 sudo apt-get update
 
 sudo apt-get install \

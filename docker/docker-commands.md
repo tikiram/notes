@@ -177,7 +177,17 @@ COPY abc.txt /src/abc.txt
 
 `ADD` Allow you to download a file from internet, also automatically uncompress files.
 
-## Push Docker Hub
+## Registry
+
+
+
+docker login registry.gitlab.com
+
+docker tag backend $CI_REGISTRY/usac-ads2/ads2-practica-01:backend$version
+docker push $CI_REGISTRY/usac-ads2/ads2-practica-01:backend$version
+
+docker pull registry.gitlab.com/usac-ads2/ads2-practica-01:products-api-imagev01.02.00
+
 
 ## Exec
 

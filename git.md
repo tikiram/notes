@@ -1,18 +1,18 @@
----
-title: git
-created: '2020-07-02T04:14:03.950Z'
-modified: '2020-07-20T21:24:29.418Z'
----
-
 # Git
+
+##
+
+```bash
+git describe
+```
 
 ## SSH
 
 This creates a new ssh key, using the provided email as a label.
 
 ```bash
-$ ssh-keygen -t rsa -b 4096 -C "tikiram.samaneb@gmail.com"
-$ ssh-keygen -t rsa -b 4096 -C "tikiram@icloud.com"
+ssh-keygen -t rsa -b 4096 -C "tikiram.samaneb@gmail.com"
+ssh-keygen -t rsa -b 4096 -C "tikiram@icloud.com"
 ```
 
 ```bash

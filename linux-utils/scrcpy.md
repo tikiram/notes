@@ -22,11 +22,13 @@ meson x --buildtype release --strip -Db_lto=true -Dprebuilt_server=../scrcpy-ser
 meson x --reconfigure --buildtype release --strip -Db_lto=true -Dprebuilt_server=../scrcpy-server-v1.14
 ninja -Cx
 
+
 # install
 sudo ninja -Cx install
 
 
 scrcpy --turn-screen-off --bit-rate 16M -m 1560 --fullscreen
+scrcpy --bit-rate 16M -m 1560 --fullscreen
 
 scrcpy --turn-screen-off --bit-rate 8M -m 1024
 
