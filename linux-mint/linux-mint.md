@@ -175,11 +175,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 
 # this modifies ~/.bashrc
 # close and reopen terminal
+source .bashrc
 
 nvm ls-remote
 
 # install latest LTS
-nvm install 10.16.3
+nvm install 12.18.3
 
 nvm current
 ```
