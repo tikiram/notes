@@ -29,6 +29,11 @@ docker stop $(docker ps -a -q)
 docker rm $(docker ps -a -q)
 ```
 
+```bash
+sudo docker stop $(sudo docker ps -a -q)
+sudo docker rm $(sudo docker ps -a -q)
+```
+
 ## Commands
 
 Run command will create the container using the image we specified
