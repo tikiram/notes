@@ -54,3 +54,25 @@ export PATH=${PATH}:/home/tikiram_samaneb/.nvm/versions/node/v9.11.1/bin
 
 
 export PATH=${PATH}:/var/lib/jenkins/.nvm/versions/node/v12.18.3/bin
+
+---------------------------
+
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+
+sudo apt update
+
+sudo apt install jenkins
+
+sudo systemctl start jenkins
+
+sudo systemctl status jenkins
+```
+
+http://68.183.102.104/github-webhook
+http://68.183.102.104:8080/github-webhook/
+
+
+su - username2
