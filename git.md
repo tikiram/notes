@@ -11,8 +11,12 @@ git checkout --theirs path/to/file
 
 ## Git diff to file
 
+```
 git diff --color > foo.txt
+```
+```
 git diff > 20150203_someChanges.diff
+```
 
 > https://stackoverflow.com/questions/9706492/git-diff-output-to-file-preserve-coloring
 > https://stackoverflow.com/questions/2013091/coloured-git-diff-to-html?noredirect=1&lq=1
