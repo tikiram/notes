@@ -24,12 +24,15 @@ git config --global user.email "tikiram.samaneb@gmail.com"
 `C:\Program Files\Git\etc\profile.d\git-prompt.sh`
 
 ```
+	PS1='\[\033]0;`basename "$PWD"`\007\]' # set window title
+	# ...
 	# PS1="$PS1"'\u@\h '             # user@host<space>
 	# PS1="$PS1"'\[\033[35m\]'       # change to purple
 	# PS1="$PS1"'$MSYSTEM '          # show MSYSTEM
 ```
 
 > https://stackoverflow.com/questions/48012838/hide-username-and-computer-name-from-git-bash-for-windows-10/51539675
+> https://stackoverflow.com/questions/6697753/difference-between-single-and-double-quotes-in-bash
 
 ## Node
 
