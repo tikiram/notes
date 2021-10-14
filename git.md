@@ -51,3 +51,29 @@ git diff branch_1...branch_2
 ```
 git diff --name-only branch_1...branch_2
 ```
+
+# Two accounts
+
+```
+# Personal account, - the default config
+Host github.com
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa
+   
+# Work account-1
+Host github.com-company 
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_company
+```
+
+Optional ?
+```
+ssh-add ~/.ssh/id_rsa_doe_company
+```
+
+```
+ssh -T git@github.com
+ssh -T git@github.com-company
+```
