@@ -232,19 +232,59 @@ Extra notes [styled() - MUI](https://mui.com/system/styled/) (same URL provied i
 </Typography>
 ```
 
++ `typography` is also a `system` prop
+
 ```tsx
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
 
-const Div = styled('div')(({ theme }) => ({
-  ...theme.typography.button,
-  backgroundColor: theme.palette.background.paper,
-  padding: theme.spacing(1),
-}));
-
-export default function TypographyTheme() {
-  return <Div>{"This div's text looks like that of a button."}</Div>;
-}
 ```
 
 + In addition to using the default typography variants, you can add custom ones, or disable any you don't need
+
+## Theming
+
+* **READ THE DOCUMENTATION INSTEAD**
++ [Default Theme - Material UI](https://mui.com/material-ui/customization/default-theme/?expand-path=$.palette)
+
++ Variables
+  
+  + palette
+  
+  + typography
+  
+  + spacing
+  
+  + breakpoints
+  
+  + zIndex
+  
+  + transitions
+  
+  + components
+
++ When using MUI's theme with [MUI System](https://mui.com/system/basics/) or [any other styling solution](https://mui.com/material-ui/guides/interoperability/#themeprovider), it can be convenient to add additional variables to the theme so you can use them everywhere. For instance:
+
+```jsx
+const theme = createTheme({
+  status: {
+    danger: orange[500],
+  },
+});
+```
+
++ Typescript requires module augmentation
+  
+  ```tsx
+  declare module '@mui/material/styles' {
+    interface Theme {
+      status: {
+        danger: string;
+      };
+    }
+    // allow configuration using `createTheme`
+    interface ThemeOptions {
+      status?: {
+        danger?: string;
+      };
+    }
+  }
+  ```
