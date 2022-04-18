@@ -74,3 +74,21 @@ export default function Layout({ children }) {
 ## Deploy
 
 https://vercel.com/
+
+---
+
+## Prettier
+
+```bash
+yarn add --dev prettier eslint-config-prettier
+```
+
+eslint config file
+
+```
+{
+  "extends": ["next", "prettier"]
+}
+```
+
++ Invoke with Option+Command+L
