@@ -56,6 +56,7 @@ open -a TextEdit ~/.oh-my-zsh/themes/agnoster.zsh-theme
 > `# prompt_context`
 
 * Install [Terminal Themes](https://github.com/lysyi3m/macos-terminal-themes)
+    + ayuLight
 * Install [Jetbrains Font](https://www.jetbrains.com/lp/mono/) (Necessary for `agnoster`)
 * Change all profiles to Jetbrains Mono
 
