@@ -107,7 +107,7 @@ export NVM_DIR="$HOME/.nvm"
 ```
 
 ```bash
-nvm list available
+nvm ls-remote
 nvm install 14.17.6
 nvm use 14.17.6
 ```
