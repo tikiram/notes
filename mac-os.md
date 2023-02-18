@@ -125,3 +125,9 @@ export PATH="/Users/$USER/Library/Android/sdk/platform-tools":$PATH
 ```
 
 > https://stackoverflow.com/questions/7609270/not-able-to-access-adb-in-os-x-through-terminal-command-not-found/65538729#65538729
+
+## Postgresql
+
+```bash
+docker run --name postgresql -e POSTGRES_USER=asdf1234 -e POSTGRES_PASSWORD=asdf1234 -p 5432:5432 -d postgres
+```
