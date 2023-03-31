@@ -4,12 +4,13 @@
 
 + spotify
 + sublime text
-+ adblock for safari
++ chrome
 
-## Brew (?)
+## Git
 
-+ https://brew.sh
-  - installs xcode line commands (includes git)
+```bash
+git --version
+```
 
 ## Git Setup
 
@@ -58,7 +59,8 @@ open -a TextEdit ~/.oh-my-zsh/themes/agnoster.zsh-theme
 * Install [Terminal Themes](https://github.com/lysyi3m/macos-terminal-themes)
     + ayuLight
 * Install [Jetbrains Font](https://www.jetbrains.com/lp/mono/) (Necessary for `agnoster`)
-* Change all profiles to Jetbrains Mono
+
+* Change all profiles to Jetbrains Mono (Apple Script)
 
 ```
 tell application "Terminal"
@@ -80,22 +82,6 @@ omz version
 omz update
 ```
 
-### Extra info
-
-* (optional) - Powerline fonts
-
-```bash
-cd ~/Repositories
-git clone git@github.com:powerline/fonts.git
-cd fonts
-./install.sh
-```
-
-> https://apple.stackexchange.com/questions/352354/how-to-change-font-size-and-font-for-all-profiles-in-terminal
-
-
-
----
 
 ## nvm
 
