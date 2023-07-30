@@ -97,6 +97,9 @@ nvm ls-remote
 nvm install 14.17.6
 nvm use 14.17.6
 ```
+```bash
+nvm install --lts
+```
 
 ## Android
 
@@ -117,3 +120,10 @@ export PATH="/Users/$USER/Library/Android/sdk/platform-tools":$PATH
 ```bash
 docker run --name postgresql -e POSTGRES_USER=asdf1234 -e POSTGRES_PASSWORD=asdf1234 -p 5432:5432 -d postgres
 ```
+
+## Utils
+
+
++ https://github.com/MonitorControl/MonitorControl
+
++ https://www.keka.io/es/

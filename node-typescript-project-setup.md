@@ -28,6 +28,7 @@ npm i nodemon --save-dev
 * https://expressjs.com/
 
 ```bash
+npm i express
 npm i --save-dev @types/express
 ```
 
