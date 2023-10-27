@@ -125,5 +125,7 @@ docker run --name postgresql -e POSTGRES_USER=asdf1234 -e POSTGRES_PASSWORD=asdf
 
 
 + https://github.com/MonitorControl/MonitorControl
++ https://github.com/waydabber/BetterDisplay
+    - https://www.reddit.com/r/MacOS/comments/113brtc/tip_for_if_youre_using_3440x1440_displays_with/
 
 + https://www.keka.io/es/

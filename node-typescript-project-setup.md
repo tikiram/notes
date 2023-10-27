@@ -35,8 +35,12 @@ npm i --save-dev @types/express
 * https://eslint.org/
 	- style + no typescript config
 	- save as json (js can cause conflict with the linter + ts)
+		+ this can be solved with ("ignorePatterns": [".eslintrc.js"],)
 
 * https://www.npmjs.com/package/eslint-config-airbnb-typescript
+
+* Airbnb typescript - import section - mimics a basic support for TS, not actual TS resolution.
+	- Follow ts configuration here https://www.npmjs.com/package/eslint-plugin-import
 
 * https://prettier.io/docs/en/install.html
 	- supports typescript out of the box
