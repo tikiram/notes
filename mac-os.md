@@ -17,7 +17,7 @@ git --version
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
 ```bash
-ssh-keygen -t ed25519 -C "tikiram.ruiz@gmail.com"
+ssh-keygen -t ed25519 -C "tikiram@icloud.com"
 
 cat ~/.ssh/id_ed25519.pub | pbcopy
 ```
@@ -30,7 +30,7 @@ ssh -T git@github.com
 
 ```bash
 git config --global user.name "Tikiram Ruiz"
-git config --global user.email "tikiram.ruiz@gmail.com"
+git config --global user.email "tikiram@icloud.com"
 ```
 
 ## Oh my Zsh 
