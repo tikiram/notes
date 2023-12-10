@@ -19,9 +19,10 @@ brew install --cask font-jetbrains-mono
 {
     "font_face": "Jetbrains Mono",
     "font_size": 14,
-    "color_scheme": "Sixteen.sublime-color-scheme",
+    "color_scheme": "Sixteen.sublime-color-scheme"
 }
 ```
+* WriterSide `brew install --cask writerside`
 
 * Postgresql
 
@@ -75,6 +76,8 @@ end tell' | osascript
 ```
 
 * Set profile as default
+* Terminal: Set windows-size
+* Terminal: Set Close if the shell exited cleanly
 
 ## Git Setup
 
@@ -96,6 +99,24 @@ ssh -T git@github.com
 git config --global user.name "Tikiram Ruiz"
 git config --global user.email "tikiram@icloud.com"
 ```
+
+---
+
+## Dock:
++ Minimize windows into application icon: on
++ Show suggested and recent apps in Dock: off
++ Use iPhone widgets: off
+
+## Safari:
+
+* General
+  + Safari open with: All non-private windows from last session
+* Advanced
+  + Smart Search Field: Show full website address
+* View:
+  + Show tab bar
+  + Show favorites bar
+  + Show status bar
 
 ---
 
