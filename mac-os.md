@@ -24,6 +24,8 @@ brew install --cask font-jetbrains-mono
 ```
 * WriterSide `brew install --cask writerside`
 
+* WebStorm: `brew install --cask webstorm`
+
 * Postgresql
 
 ```bash
