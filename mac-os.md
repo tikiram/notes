@@ -1,85 +1,28 @@
 # macOS
 
-+ Mouse: Enable right-click 
+
++ Mouse: Enable right-click
 + External Keyboard: switch modifier keys
-+ Install git: `git —version`
++ Install git: git —version
 + Install Brew: https://brew.sh
-+ Install BetterDisplay: `brew install --cask betterdisplay`
-+ Jetbrains Mono: 
-> https://github.com/JetBrains/JetBrainsMono
+
 ```bash
 brew tap homebrew/cask-fonts
 brew install --cask font-jetbrains-mono
 ```
 
-+ Install Sublime: 
-`brew install --cask sublime-text`
-
-```json
-{
-    "font_face": "Jetbrains Mono",
-    "font_size": 14,
-    "color_scheme": "Sixteen.sublime-color-scheme"
-}
+```bash
+brew install --cask sublime-text
 ```
-* WriterSide `brew install --cask writerside`
-
-* WebStorm: `brew install --cask webstorm`
-
-* Postgresql
 
 ```bash
 brew install postgresql
 brew services start postgresql
 ```
 
-* Spotify
-
 ```bash
 brew install --cask spotify
 ```
-
-## Oh my Zsh
-
-* [GitHub](https://github.com/ohmyzsh/ohmyzsh)
-* Install
-
-```bash
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-```bash
-# Set theme:
-perl -p -w -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g;' ~/.zshrc | grep 'ZSH_THEME="agnoster"'
-perl -pi -w -e 's/ZSH_THEME="robbyrussell"/ZSH_THEME="agnoster"/g;' ~/.zshrc
-
-# Customize theme:
-perl -p -w -e 's/  prompt_context/  #prompt_context/g;' ~/.oh-my-zsh/themes/agnoster.zsh-theme | grep 'prompt_context'
-perl -pi -w -e 's/  prompt_context/  #prompt_context/g;' ~/.oh-my-zsh/themes/agnoster.zsh-theme
-```
-
-* Install color schema
-```bash
-TEMPFILE=$(mktemp /tmp/ayu.terminal)
-curl https://raw.githubusercontent.com/lysyi3m/macos-terminal-themes/master/themes/ayu%20Light.terminal -o $TEMPFILE
-open -a Terminal $TEMPFILE
-```
-
-* Set jetbrains font as default on all terminal profiles
-
-```bash
-echo 'tell application "Terminal"
-    set ProfilesNames to name of every settings set
-    repeat with ProfileName in ProfilesNames
-        set font name of settings set ProfileName to "JetBrainsMono-Regular"
-        set font size of settings set ProfileName to 14
-    end repeat
-end tell' | osascript
-```
-
-* Set profile as default
-* Terminal: Set windows-size
-* Terminal: Set Close if the shell exited cleanly
 
 ## Git Setup
 
@@ -102,54 +45,47 @@ git config --global user.name "Tikiram Ruiz"
 git config --global user.email "tikiram@icloud.com"
 ```
 
----
+## powerlevel10k
 
-## Dock:
+JetBrainsMno Nerd Font
+https://www.nerdfonts.com/font-downloads
+
+https://github.com/romkatv/powerlevel10k
+
+Powerlevel10k
+
+## Dock
+
 + Minimize windows into application icon: on
 + Show suggested and recent apps in Dock: off
 + Use iPhone widgets: off
 
-## Safari:
+## Safari
 
-* General
-  + Safari open with: All non-private windows from last session
-* Advanced
-  + Smart Search Field: Show full website address
-* View:
-  + Show tab bar
-  + Show favorites bar
-  + Show status bar
-
----
-
-
-## nvm
-
-https://github.com/nvm-sh/nvm
-
-```
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-```
-
-```bash
-nvm ls-remote
-nvm install 14.17.6
-nvm use 14.17.6
-```
-```bash
-nvm install --lts
-```
++ General
+    - Safari open with: All non-private windows from last session
++ Advanced
+    - Smart Search Field: Show full website address
++ View:
+    - Show tab bar
+    - Show favorites bar
+    - Show status bar
 
 ## Utils
 
+```bash
+swift --version
+```
 
-+ https://github.com/MonitorControl/MonitorControl
-+ https://github.com/waydabber/BetterDisplay
-    - https://www.reddit.com/r/MacOS/comments/113brtc/tip_for_if_youre_using_3440x1440_displays_with/
+```bash
+brew list
+```
 
-+ https://www.keka.io/es/
+```bash
+brew list --cask
+```
 
-## Docs
+```bash
+p10k configure
+```
 
-https://unix.stackexchange.com/questions/112023/how-can-i-replace-a-string-in-a-files
