@@ -22,6 +22,8 @@ brew services start postgresql
 
 ```bash
 brew install --cask spotify
+brew install --cask pycharm
+brew install --cask firefox 
 ```
 
 ## Git Setup
@@ -71,6 +73,28 @@ Powerlevel10k
     - Show favorites bar
     - Show status bar
 
+## Node
+
+```bash
+brew install nvm # follow extra instructions by brew after install
+nvm install --lts
+```
+
+## 7Zip
+
+```bash
+brew install sevenzip
+7zz --help
+```
+
+```bash
+7zz x <filename> -p<password>
+```
+
+```bash
+7zz x fo.7z -p1234
+```
+
 ## Utils
 
 ```bash
@@ -89,3 +113,19 @@ brew list --cask
 p10k configure
 ```
 
+## Others
+
+### Check DNS servers
+
+```
+scutil --dns | grep 'nameserver\[[0-9]*\]'
+```
+
+Claro Movil: `172.20.10.1`
+
+
+### Adding new entry to PATH
+
+```bash
+path+=/some/new/bin/dir
+```
