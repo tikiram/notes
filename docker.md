@@ -21,3 +21,8 @@ docker logs [id]
 ```bash 
 docker cp <container_id>:/path/to/useful/file /local-path
 ```
+
+Get into a container
+```bash
+docker exec -it <mycontainer> bash
+```

@@ -23,6 +23,7 @@ brew services start postgresql
 ```bash
 brew install --cask spotify
 brew install --cask pycharm
+brew install --cask webstorm
 brew install --cask firefox 
 ```
 
