@@ -12,13 +12,22 @@ cd new my_project
 open Package.swift
 ```
 
-- Copy `configure` settings from other project
+- Copy `.env`/`example.env` files
+  + Set database connection
+- Add JWT library
+- Copy `configure.swift` settings from other project
 
 ## Migrate DB
 
 ```bash
 swift run App migrate
 ````
+
+## Run
+
+```bash
+swift run App serve --port 3000
+```
 
 ## Heroku
 
@@ -41,3 +50,20 @@ vapor/vapor
 
 + add env variables
 + deploy
+
+## Update Dependencies
+
+```bash
+swift package update
+```
+
+---
+
+## Update
+
+### Swift Version
+
+Same swift version on both files
+
++ Package.swift
++ .swift-version
