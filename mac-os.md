@@ -111,6 +111,10 @@ brew list --cask
 ```
 
 ```bash
+brew outdated
+```
+
+```bash
 p10k configure
 ```
 
