@@ -1,18 +1,22 @@
 # macOS
 
-
 + Mouse: Enable right-click
 + External Keyboard: switch modifier keys
 + Install git: git —version
 + Install Brew: https://brew.sh
 
 ```bash
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono
+brew install --cask sublime-text
+brew install --cask spotify
+brew install --cask firefox 
+brew install --cask writerside
 ```
 
 ```bash
-brew install --cask sublime-text
+brew install --cask betterdisplay
+brew install --cask pycharm
+brew install --cask webstorm
+brew install --cask datagrip
 ```
 
 ```bash
@@ -20,11 +24,8 @@ brew install postgresql
 brew services start postgresql
 ```
 
-```bash
-brew install --cask spotify
-brew install --cask pycharm
-brew install --cask webstorm
-brew install --cask firefox 
+```sql
+CREATE USER postgres SUPERUSER;
 ```
 
 ## Git Setup
@@ -53,9 +54,19 @@ git config --global user.email "tikiram@icloud.com"
 JetBrainsMno Nerd Font
 https://www.nerdfonts.com/font-downloads
 
-https://github.com/romkatv/powerlevel10k
+```bash
+brew install --cask font-jetbrains-mono-nerd-font
+```
 
-Powerlevel10k
+* Set font on terminal
+* Install powerlevel10k https://github.com/romkatv/powerlevel10k
+* shell > close if the shell exited cleanly
+
+# Add `zsh` to .zshrc
+
+```bash
+source ~/Respositories/notes/tikiram.zsh
+```
 
 ## Dock
 
