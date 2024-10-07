@@ -8,8 +8,9 @@
 ```bash
 brew install --cask sublime-text
 brew install --cask spotify
-brew install --cask firefox 
 brew install --cask writerside
+brew install --cask firefox
+brew install --cask brave-browser
 ```
 
 ```bash
@@ -26,6 +27,12 @@ brew services start postgresql
 
 ```sql
 CREATE USER postgres SUPERUSER;
+```
+
+### Upgrade cask
+
+```bash
+brew upgrade --cask writerside
 ```
 
 ## Git Setup
@@ -65,7 +72,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 # Add `zsh` to .zshrc
 
 ```bash
-source ~/Respositories/notes/tikiram.zsh
+source ~/Repositories/notes/tikiram.zsh
 ```
 
 ## Dock
@@ -145,3 +152,7 @@ Claro Movil: `172.20.10.1`
 ```bash
 path+=/some/new/bin/dir
 ```
+
+## TODO
+
+- Maybe a script installing all of this?
