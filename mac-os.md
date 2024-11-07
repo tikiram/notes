@@ -18,6 +18,7 @@ brew install --cask betterdisplay
 brew install --cask pycharm
 brew install --cask webstorm
 brew install --cask datagrip
+brew install --cask intellij-idea
 ```
 
 ```bash
@@ -112,6 +113,7 @@ brew install sevenzip
 
 ```bash
 7zz x fo.7z -p1234
+7zz x asdf.7z -pm0simPX5#5s$
 ```
 
 ## Utils
