@@ -11,6 +11,8 @@ brew install --cask spotify
 brew install --cask writerside
 brew install --cask firefox
 brew install --cask brave-browser
+brew install --cask qbittorrent
+brew install --cask vlc
 ```
 
 ```bash
