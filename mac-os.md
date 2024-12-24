@@ -23,19 +23,27 @@ brew install --cask datagrip
 brew install --cask intellij-idea
 ```
 
+### Upgrade cask
+
 ```bash
-brew install postgresql
-brew services start postgresql
+brew upgrade --cask writerside
+```
+
+## Postgres
+
+```bash
+brew install postgresql@15
+
+brew services start postgresql@15
+brew services stop postgresql@15
 ```
 
 ```sql
 CREATE USER postgres SUPERUSER;
 ```
 
-### Upgrade cask
-
-```bash
-brew upgrade --cask writerside
+```
+brew uninstall postgresql@14
 ```
 
 ## Git Setup
