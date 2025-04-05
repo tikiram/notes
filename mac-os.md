@@ -152,7 +152,8 @@ p10k configure
 
 ### Check DNS servers
 
-```
+```bash
+scutil --dns
 scutil --dns | grep 'nameserver\[[0-9]*\]'
 ```
 
@@ -168,3 +169,15 @@ path+=/some/new/bin/dir
 ## TODO
 
 - Maybe a script installing all of this?
+
+## UUID
+
+```bash
+uuidgen
+```
+
+## MD5
+
+```bash
+echo "tensai-prod" | md5
+```

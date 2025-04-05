@@ -77,3 +77,23 @@ ssh-add ~/.ssh/id_rsa_doe_company
 ssh -T git@github.com
 ssh -T git@github.com-company
 ```
+
+## Remote
+
+
+```bash
+git remove -v
+git remove show origin
+
+git remote set-url origin NEW_URL
+
+git remote set-url origin git@github.com:tikiram/identity-provider.git
+
+git remote set-url origin git@github.com:tikiram/shared-ui-ts.git
+
+git remote set-url origin git@github.com:tikiram/shared-be-swift.git
+
+```
+
+
+

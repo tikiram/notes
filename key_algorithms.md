@@ -14,7 +14,7 @@ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' identity-provider-public.pem | pbco
 
 ```bash
 openssl ecparam -name prime256v1 -genkey -noout -out prod-identity-provider-private.pem
-openssl ec -in identity-provider-private.pem -pubout -out prod-identity-provider-public.pem
+openssl ec -in prod-identity-provider-private.pem -pubout -out prod-identity-provider-public.pem
 
 awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' prod-identity-provider-private.pem | pbcopy
 awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' prod-identity-provider-public.pem | pbcopy
@@ -42,6 +42,7 @@ openssl rsa -in private_key.pem -pubout -out public_key.pem
 ## identity-provider
 
 openssl genpkey -algorithm RSA -out identity-provider_private_key.pem -pkeyopt rsa_keygen_bits:2048
+
 openssl rsa -in identity-provider_private_key.pem -pubout -out identity-provider_public_key.pem
 
 # Para la clave privada
