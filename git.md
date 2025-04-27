@@ -82,12 +82,13 @@ ssh -T git@github.com-company
 
 
 ```bash
-git remove -v
-git remove show origin
+git remote -v
+git remote show origin
 
 git remote set-url origin NEW_URL
 
 git remote set-url origin git@github.com:tikiram/identity-provider.git
+git remote set-url origin git@github.com:tikiram/jwt-auth-service.git
 
 git remote set-url origin git@github.com:tikiram/shared-ui-ts.git
 
@@ -95,5 +96,8 @@ git remote set-url origin git@github.com:tikiram/shared-be-swift.git
 
 ```
 
-
+```bash
+git remote add other git@github.com:tikiram/temp-next.git
+git push other main
+```
 

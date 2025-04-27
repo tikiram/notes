@@ -28,7 +28,13 @@ Go to definition - the shortcut now is ^ + ⌘ + J (more readable Ctrl + Cmd + J
 
 ## Issues
 
-Missing package product
+### Vapor
+
+```
+swift package clean
+```
+
+### Missing package product
 
 https://swiftylion.com/articles/missing-package-product
 
