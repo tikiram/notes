@@ -22,6 +22,7 @@ brew install --cask spotify
 brew install --cask whatsapp
 brew install --cask vlc
 brew install --cask qbittorrent
+brew install --cask visual-studio-code
 ```
 
 ```bash
@@ -57,6 +58,10 @@ ssh -T git@github.com
 ```bash
 git config --global user.name "Tikiram Ruiz"
 git config --global user.email "tikiram@icloud.com"
+```
+
+```bash
+git config --global pull.rebase true
 ```
 
 ### powerlevel10k

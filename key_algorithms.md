@@ -3,6 +3,7 @@
 > https://notes.salrahman.com/generate-es256-es384-es512-private-keys/
 
 
+## ECDSA - es256
 
 ```bash
 openssl ecparam -name prime256v1 -genkey -noout -out identity-provider-private.pem
