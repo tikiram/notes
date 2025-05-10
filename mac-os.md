@@ -102,7 +102,12 @@ source ~/Repositories/notes/tikiram.zsh
 
 ### Mail
 
-TODO
+* edit favorites
+* view - show favorites bar
+* view - show contact photo
+* view - Higlight conversations
+* view - customize toolbar
+  - Icon and Text
 
 ---
 
