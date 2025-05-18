@@ -170,6 +170,12 @@ swift --version
 brew list
 ```
 
+> mongo installs node
+
+```bash
+brew uses --installed node
+```
+
 ```bash
 brew list --cask
 ```
