@@ -47,3 +47,13 @@ DispatchQueue.main.async {
   self.isUnlocked = true
 }
 ```
+
+### Foundation
+
+```swift
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
+import Foundation
+#endif
+```

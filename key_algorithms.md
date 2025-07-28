@@ -16,10 +16,18 @@ awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' identity-provider-public.pem | pbco
 ```bash
 openssl ecparam -name prime256v1 -genkey -noout -out prod-identity-provider-private.pem
 openssl ec -in prod-identity-provider-private.pem -pubout -out prod-identity-provider-public.pem
+```
 
+```
 awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' prod-identity-provider-private.pem | pbcopy
 awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' prod-identity-provider-public.pem | pbcopy
 ```
+
+```
+awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' cloud_lingua_dev-private.pem | pbcopy
+awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' cloud_lingua_dev-public.pem | pbcopy
+```
+
 
 
 ## RS256 
