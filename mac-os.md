@@ -182,6 +182,7 @@ brew list --cask
 
 ```bash
 brew outdated
+brew outdated --cask
 ```
 
 ```bash
