@@ -94,6 +94,9 @@ git remote set-url origin git@github.com:tikiram/shared-ui-ts.git
 
 git remote set-url origin git@github.com:tikiram/shared-be-swift.git
 
+git remote remove origin
+
+
 ```
 
 ```bash
