@@ -1,9 +1,29 @@
 
 # Docker
 
+## Install
+
+> https://docs.orbstack.dev/quick-start
 
 ```bash
-docker build -t myimage .
+brew install orbstack
+```
+
+* open orbstack app
+
+## Resources
+
+> https://docs.docker.com/build/cache/optimize/
+
+## Commands
+
+```bash
+docker build -t my_builder -f BuildDockerfile .
+```
+
+
+```bash
+docker build -t tag .
 docker images
 
 docker run -d -p 5000:5000 p01_image
