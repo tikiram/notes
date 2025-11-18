@@ -1,33 +1,33 @@
 
 # Python - Backend
 
-## Rancher Desktop
-
-- helm
-- kubectl
-- nerdctl
-- docker (moby)
-
-
-```bash
-brew install --cask rancher
-```
-
-> It's seems there is no "/var/run/docker.sock". In that case, you need to configure rancher desktop. On preferences [Application] -> [Behavior] -> Check [Administrative Access] then application will be restarting. after restarting rancher desktop, you can find "/var/run/docker.sock".
-
 ## Environments
 
 - venv: this tool provides isolated Python environments 
 - docker: isolated environment
 
-### Docker
+> It is suggested to have a dedicated virtual environment for each Django project, and one way to manage a virtual environment is venv, which is included in Python.
 
 ```bash
-docker build -t myimage .
-docker images
-
-docker run -d -p 5000:5000 p01_image
+mkdir myproject
+cd myproject
+python3 -m venv myenv
+source myenv/bin/activate
 ```
+
+* Install dependencies e.g.: `python -m pip install Django`
+
+## Dependencies - `pip-tools`
+
+> Instead of directly writing your requirements.txt, you write a `requirements.in` file, which is your definition file. You then use the `pip-compile` command to generate the `requirements.txt` file, which functions as the lock file. You can then use `requirements.txt` with `pip` to set up your environment, or if you already have an environment you can use the `pip-sync` command provided by `pip-tools` to sync your environment with what is defined in the lock file.
+
+- alternatives:
+  * Pipenv
+  * Poetry
+
+
+
+
 
 ## pip upgrade
 
@@ -38,7 +38,7 @@ python3 -m pip install --upgrade pip
 ## Django
 
 ```bash
-python3 -m pip install Django
+python -m pip install Django
 ```
 
 > `python -m pip` vs `pip`: They do exactly the same thing, assuming pip is using the same version of Python as the python executable. The docs for distributing Python modules were just updated to suggest using python -m pip instead of the pip executable, because it allows you to be explicit about which version of Python to use. In systems with more than one version of Python installed, it's not always clear which one pip is linked to.

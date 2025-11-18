@@ -21,8 +21,16 @@ sudo apt update
 sudo apt upgrade
 ```
 
+## Postgresql
+
+```bash
+sudo apt install postgresql
+```
+
 
 ## Swift
+
+> for building apps consider using the docker swift image
 
 * Install swiftly (https://www.swift.org/install/linux/)
 * Install dependencies described by swiftly

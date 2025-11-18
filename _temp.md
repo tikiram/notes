@@ -158,6 +158,13 @@ uname -m
 cat /etc/os-release
 uname -m
 
+sudo apt install postgresql
+sudo -u postgres psql
+\q
+sudo -u postgres psql -f path/to/your/file.sql
+
+sudo -u postgres psql -f /home/ubuntu/Linux/data_for_2.sql
+
 
 sudo dnf install <package>
 sudo dnf install libjemalloc2

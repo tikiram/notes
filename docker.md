@@ -15,6 +15,12 @@ brew install orbstack
 
 > https://docs.docker.com/build/cache/optimize/
 
+e.g.:
+
+```
+RUN --mount=type=cache,target=/root/.cache/org.swift.swiftpm \
+```
+
 ## Commands
 
 ```bash

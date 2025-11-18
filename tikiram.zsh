@@ -56,3 +56,12 @@ function repos() {
 # function f() {
 #   swift format ./Sources -p -r -i
 # }
+
+function ec2 {
+    aws ec2 describe-instances \
+      --query 'Reservations[*].Instances[*].{Name:Tags[?Key==`Name`]|[0].Value,InstanceId:InstanceId,InstanceType:InstanceType,State:State.Name,LaunchTime:LaunchTime}' \
+      --output table
+    echo ""
+    echo "aws ec2 stop-instances --instance-ids i-xxx"
+    echo "aws ec2 start-instances --instance-ids i-xxx"
+}

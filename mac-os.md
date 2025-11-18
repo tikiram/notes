@@ -123,10 +123,10 @@ brew upgrade --cask qbittorrent
 ## Postgres
 
 ```bash
-brew install postgresql@15
+brew install postgresql@18
 
-brew services start postgresql@15
-brew services stop postgresql@15
+brew services start postgresql@18
+brew services stop postgresql@18
 ```
 
 ```sql
