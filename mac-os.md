@@ -6,15 +6,15 @@
 + External Keyboard: switch modifier keys
 
 
-+ Install git: git —version
++ Install git: `git —version`
 + Install Brew: https://brew.sh
   * Add brew to PATH (commands provided by installation)
   * `brew analytics off`
 
 ```bash
 brew install --cask sublime-text
-brew install --cask fleet
 brew install --cask google-chrome
+brew install --cask visual-studio-code
 ```
 
 ```bash
@@ -22,16 +22,16 @@ brew install --cask spotify
 brew install --cask whatsapp
 brew install --cask vlc
 brew install --cask qbittorrent
-brew install --cask visual-studio-code
+brew install --cask betterdisplay
 ```
 
 ```bash
 brew install --cask firefox
 brew install --cask brave-browser
-brew install --cask betterdisplay
 ```
 
 ```bash
+brew install --cask fleet
 brew install --cask pycharm
 brew install --cask webstorm
 brew install --cask datagrip
