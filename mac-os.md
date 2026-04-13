@@ -1,9 +1,14 @@
 # macOS
 
-## Setup
+## Settings
 
 + Mouse: Enable right-click
-+ External Keyboard: switch modifier keys
++ Keyboard: Switch modifier keys
+  - Settings > Keyboard > Keyboard Shortcuts > Modifier Keys 
+	  * Command <-> Option
++ Menu Bar
+  - Bluetooth
+  - Sound: Always show
 
 
 + Install git: `git —version`
@@ -13,11 +18,15 @@
 
 ```bash
 brew install --cask sublime-text
-brew install --cask google-chrome
 brew install --cask visual-studio-code
+brew install --cask intellij-idea
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask datagrip
+brew install awscli
 ```
 
 ```bash
+brew install --cask ghostty
 brew install --cask spotify
 brew install --cask whatsapp
 brew install --cask vlc
@@ -26,16 +35,14 @@ brew install --cask betterdisplay
 ```
 
 ```bash
+brew install --cask google-chrome
 brew install --cask firefox
 brew install --cask brave-browser
 ```
 
 ```bash
-brew install --cask fleet
 brew install --cask pycharm
 brew install --cask webstorm
-brew install --cask datagrip
-brew install --cask intellij-idea
 ```
 
 ### Git Setup
@@ -64,14 +71,24 @@ git config --global user.email "tikiram@icloud.com"
 git config --global pull.rebase true
 ```
 
-### powerlevel10k
-
-JetBrainsMno Nerd Font
-https://www.nerdfonts.com/font-downloads
+### Starship
 
 ```bash
-brew install --cask font-jetbrains-mono-nerd-font
+brew install starship
 ```
+
+add to `~/.zshrc`
+
+```
+eval "$(starship init zsh)"
+```
+
+> https://starship.rs/guide/
+
+### powerlevel10k
+
+Install JetBrainsMno Nerd Font
+https://www.nerdfonts.com/font-downloads
 
 * Set font on terminal
 * Install powerlevel10k https://github.com/romkatv/powerlevel10k
@@ -124,8 +141,12 @@ brew upgrade --cask qbittorrent
 
 ```bash
 brew install postgresql@18
-
 brew services start postgresql@18
+```
+
+* Creates user `tikiram` and `postgres` database
+
+```bash
 brew services stop postgresql@18
 ```
 
@@ -141,6 +162,7 @@ brew uninstall postgresql@14
 
 ```bash
 brew install nvm # follow extra instructions by brew after install
+nvm ls-remote
 nvm install --lts
 ```
 
