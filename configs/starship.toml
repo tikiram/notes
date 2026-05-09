@@ -1,0 +1,33 @@
+# https://starship.rs/config/
+# export STARSHIP_CONFIG=~/Repositories/configs/starship.toml
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """$all"""
+right_format = """$aws"""
+
+[character]
+# success_symbol = '[➜](bold green)'
+
+[line_break]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[package]
+disabled = true
+
+[swift]
+disabled = true
+
+[aws]
+disabled = false
