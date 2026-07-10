@@ -31,3 +31,10 @@ disabled = true
 
 [aws]
 disabled = false
+
+[java]
+disabled = true
+# format = 'java:[(${version} )]($style)'
+
+[gradle]
+disabled = true
