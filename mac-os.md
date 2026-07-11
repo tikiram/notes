@@ -10,42 +10,11 @@
   - Bluetooth
   - Sound: Always show
 
+## Git
 
 + Install git: `git —version`
-+ Install Brew: https://brew.sh
-  * Add brew to PATH (commands provided by installation)
-  * `brew analytics off`
 
-```bash
-brew install --cask sublime-text
-brew install --cask visual-studio-code
-brew install --cask intellij-idea
-brew install --cask font-jetbrains-mono-nerd-font
-brew install --cask datagrip
-brew install awscli
-```
-
-```bash
-brew install --cask ghostty
-brew install --cask spotify
-brew install --cask whatsapp
-brew install --cask vlc
-brew install --cask qbittorrent
-brew install --cask betterdisplay
-```
-
-```bash
-brew install --cask google-chrome
-brew install --cask firefox
-brew install --cask brave-browser
-```
-
-```bash
-brew install --cask pycharm
-brew install --cask webstorm
-```
-
-### Git Setup
+### GitHub Setup
 
 > https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
@@ -71,19 +40,105 @@ git config --global user.email "tikiram@icloud.com"
 git config --global pull.rebase true
 ```
 
+## Brew
+
++ Install Brew: https://brew.sh
+  * Add brew to PATH (commands provided by installation)
+
+```bash
+echo >> /Users/tikiram/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/tikiram/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+```
+
+```bash
+brew analytics off
+```
+
+## Packages
+
+```bash
+brew install --cask sublime-text
+brew install --cask visual-studio-code
+brew install --cask intellij-idea
+brew install --cask font-jetbrains-mono-nerd-font
+brew install --cask datagrip
+brew install awscli
+```
+
+```bash
+#brew install --cask ghostty
+brew install --cask spotify
+brew install --cask whatsapp
+brew install --cask vlc
+#brew install --cask qbittorrent
+brew install --cask betterdisplay
+```
+
+```bash
+brew install --cask google-chrome
+brew install --cask firefox
+brew install --cask brave-browser
+```
+
+```bash
+brew install --cask pycharm
+brew install --cask webstorm
+```
+
+
 ### Starship
 
 ```bash
 brew install starship
 ```
 
-add to `~/.zshrc`
+```bash
+subl ~/.zshrc
+```
 
 ```
+export STARSHIP_CONFIG=~/Repositories/notes/configs/starship.toml
+
 eval "$(starship init zsh)"
 ```
 
 > https://starship.rs/guide/
+
+## Terminal
+
+- General
+  - profile: basic
+- Profiles
+  - Set default profile
+    - set font
+  - Shell
+    - When the shell exits: Close if the shell exited cleanly
+
+## AWS
+
+```bash
+aws configure sso
+```
+
+```
+https://d-906602103d.awsapps.com/start/
+tikiram
+tikiram_session
+us-east-1
+dev_profile
+```
+
+```bash
+aws sts get-caller-identity --profile dev_profile
+aws sso login
+```
+
+* `.zshrc`
+
+```
+export AWS_PROFILE="dev_profile"
+```
 
 ### powerlevel10k
 
